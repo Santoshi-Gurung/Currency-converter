@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>💱 Currency Converter</h1>
+      <p class="subtitle">Real-time exchange rates</p>
+
+      <!-- AMOUNT INPUT -->
+      <div class="input-group">
+        <label>Amount</label>
+        <input type="number" id="amount" value="1" min="0" />
+      </div>
+
+      <!-- FROM CURRENCY -->
+      <div class="input-group">
+        <label>From</label>
+        <select id="fromCurrency"></select>
+      </div>
+
+      <!-- SWAP BUTTON -->
+      <div class="swap-section">
+        <button class="swap-btn" onclick="swapCurrencies()">⇅ Swap</button>
+      </div>
+
+      <!-- TO CURRENCY -->
+      <div class="input-group">
+        <label>To</label>
+        <select id="toCurrency"></select>
+      </div>
+
+      <!-- CONVERT BUTTON -->
+      <button class="convert-btn" onclick="convertCurrency()">Convert</button>
+
+      <!-- RESULT -->
+      <div class="result" id="result" style="display: none">
+        <h2 id="resultText"></h2>
+        <p id="rateText"></p>
+      </div>
+
+      <!-- ERROR -->
+      <p class="error" id="errorMsg"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
